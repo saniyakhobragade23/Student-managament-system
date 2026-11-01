@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎓 Student Management System</h1>
+    <p>Manage student records easily</p>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="card">
+        <h3>Total Students</h3>
+        <h2 id="total">0</h2>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2 id="formTitle">Add New Student</h2>
+
+      <form id="studentForm">
+        <input type="hidden" id="editId">
+
+        <input id="name" placeholder="Student Name" required>
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="course" placeholder="Course" required>
+
+        <select id="year" required>
+          <option value="">Select Year</option>
+          <option value="1">First Year</option>
+          <option value="2">Second Year</option>
+          <option value="3">Third Year</option>
+          <option value="4">Fourth Year</option>
+        </select>
+
+        <button type="submit" id="submitBtn">Add Student</button>
+        <button type="button" id="cancelBtn" hidden>Cancel</button>
+      </form>
+    </section>
+
+    <section class="records">
+      <h2>Student Records</h2>
+
+      <input id="search" placeholder="Search student...">
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Course</th>
+              <th>Year</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentList"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
